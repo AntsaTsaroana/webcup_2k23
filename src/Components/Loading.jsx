@@ -7,7 +7,7 @@ const Loading = () => {
     <div className="outerLoading">
       <div className="innerLoading">
         <h2>Chargement ...</h2>
-        <span class="loader"></span>
+        <span className="loader"></span>
       </div>
     </div>
   );
