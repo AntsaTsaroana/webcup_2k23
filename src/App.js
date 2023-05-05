@@ -7,18 +7,16 @@ const Footer = React.lazy(() => import("./Components/Footer"));
 
 function App() {
   return (
-    <React.Suspense fallback="Loading Composant Here ...">
-      <BrowserRouter>
-        {/* Navbar */}
-        <Navbar />
-        <Routes>
-          {/* Page d'accueil */}
-          <Route exact path="/" element={<Accueil />} />
-        </Routes>
-        {/* Footer */}
-        <Footer />
-      </BrowserRouter>
-    </React.Suspense>
+    <BrowserRouter>
+      {/* Navbar */}
+      <Navbar />
+      <Routes>
+        {/* Page d'accueil */}
+        <Route exact path="/" element={<Accueil />} />
+      </Routes>
+      {/* Footer */}
+      <Footer />
+    </BrowserRouter>
   );
 }
 

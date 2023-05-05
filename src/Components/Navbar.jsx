@@ -1,9 +1,11 @@
 import React from "react";
 
+import "../Assets/css/navbar.scss"
+
 const Navbar = () => {
   return (
     <>
-      <h1>NAVBAR</h1>
+      <nav></nav>
     </>
   );
 };
