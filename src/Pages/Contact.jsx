@@ -5,6 +5,7 @@ import { AiFillClockCircle } from 'react-icons/ai'
 import { IoMdMail } from 'react-icons/io'
 import { BsTelephoneFill } from 'react-icons/bs'
 import { IconContext } from 'react-icons'
+import { IoIosArrowDown } from 'react-icons/io'
 
 export const Contact = () => {
   return (
@@ -13,6 +14,7 @@ export const Contact = () => {
             <div className="header">
                 <h2>Contact</h2>
                 <p>Nous sommes disponibles pour vous aider à tout moment.</p>
+                <IoIosArrowDown className='arrowDown'/>
             </div>
             <div className="formSection">
                 <div className="left">
@@ -57,6 +59,7 @@ export const Contact = () => {
                     </form>
                 </div>
             </div>
+            <div className="map"></div>
         </section>
     </>
   )

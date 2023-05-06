@@ -8,12 +8,12 @@
         justify-content: center;
         text-align: center;
         min-height: 100vh;
-    }
-    h2 {
-        font-size: 5vw;
-    }
-    p {
-        line-height: 1.5;
+        h2 {
+            font-size: 5vw;
+        }
+        p {
+            line-height: 1.5;
+        }
     }
     .formSection {
         background: #ddd;
@@ -23,7 +23,7 @@
         width: 60%;
         padding: 2rem;
         position: relative;
-        top: -4rem;
+        top: -3rem;
         margin: auto;
         >* {
             flex: 1;
@@ -81,5 +81,9 @@
                 }
             }
         }
+    }
+    .map {
+        min-height: 70vh;
+        background: #eee;
     }
 }

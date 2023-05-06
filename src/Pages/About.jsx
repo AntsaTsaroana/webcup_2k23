@@ -8,6 +8,7 @@ export const About = () => {
         <div className="header">
           <h2>About Us</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ea repellendus repudiandae necessitatibus quod possimus sed laborum, veniam cumque inventore.</p>
+          
         </div>
         <div className="institute">
           <div className="image"></div>
