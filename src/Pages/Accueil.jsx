@@ -66,10 +66,17 @@ const Accueil = () => {
         <header>
           <video src={headerVideo} autoPlay muted loop></video>
           <div>
-            <h1>Tiiiiiitre 1</h1>
-            <h1>Tiiiiiiiitre 2</h1>
-            <br />
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum accusamus architecto ipsa, autem quidem illum sed vero nam tenetur officia possimus neque minus odio doloribus veritatis! Officia et tempora quod.</p>
+            <span className="title">
+              <h1>Tiiiiiitre 1</h1>
+              <h1>Tiiiiiiiitre 2</h1>
+            </span>
+            <span className="tiret"></span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
+              accusamus architecto ipsa, autem quidem illum sed vero nam tenetur
+              officia possimus neque minus odio doloribus veritatis! Officia et
+              tempora quod.
+            </p>
           </div>
         </header>
       </div>

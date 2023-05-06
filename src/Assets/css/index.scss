@@ -9,6 +9,10 @@
 //   border: 1px dashed red;
 }
 
+$first_color: #f1f1f1;
+$sec_color: #333;
+
+
 // html::-webkit-scrollbar {
 //   width: 9px;
 // }
@@ -23,6 +27,8 @@
 // }
 
 // GLOBAL MODIFICATION :
+
+
 body {
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
