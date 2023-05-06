@@ -12,7 +12,7 @@
   top: 0;
   display: flex;
   justify-content: space-between;
-  color: #fff;
+  color: $first_color;
   width: 100%;
   height: 65px;
   padding-left: 18px;
@@ -105,15 +105,10 @@
 
 // BUTTON SE CONNECTER
 .se_connecter {
+  @include button;
   position: fixed;
   top: 13px;
   right: 30px;
-  background: transparent;
-  outline: none;
-  border: 1px solid #f1f1f1;
-  color: #f1f1f1;
-  padding: 10px;
-  border-radius: 5px;
 }
 
 // BUTTON RESPONSIVE
@@ -135,7 +130,7 @@
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #f1f1f1;
+  background: $first_color;
   transition: transform 0.3s ease-out, opacity 0.1s ease-in;
 }
 
@@ -148,7 +143,7 @@
 }
 
 .menuResp {
-    display: none;
+  display: none;
 }
 
 // RESPONSIVE
@@ -185,7 +180,7 @@
 
     a {
       text-decoration: none;
-      color: #f1f1f1;
+      color: $first_color;
       font-size: 20px;
       margin: 10px 0;
     }

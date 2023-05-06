@@ -6,12 +6,38 @@
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
-//   border: 1px dashed red;
+  //   border: 1px dashed red;
+}
+
+// RESET COMPONENT :
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+@mixin button {
+  background: transparent;
+  outline: none;
+  border: 1px solid #f1f1f1;
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@mixin maxWidth {
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 $first_color: #f1f1f1;
 $sec_color: #333;
-
+$color_3: #3a677c;
+$color_4: #60929b;
+$color_5: #fed0b9;
+$color_6: #558794;
+$color_7: #d8a29c;
 
 // html::-webkit-scrollbar {
 //   width: 9px;
@@ -27,7 +53,6 @@ $sec_color: #333;
 // }
 
 // GLOBAL MODIFICATION :
-
 
 body {
   overflow-x: hidden;

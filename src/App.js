@@ -3,12 +3,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Loading from './Components/Loading';
 import { AuthContext } from './Context/AuthContext';
 import axios from 'axios';
+import { About } from './Pages/About';
 
-const Navbar = React.lazy(() => import('./Components/Navbar'));
-const Accueil = React.lazy(() => import('./Pages/Accueil'));
-const Footer = React.lazy(() => import('./Components/Footer'));
 const Inscription = React.lazy(() => import('./Pages/Inscription'));
 const Connexion = React.lazy(() => import('./Pages/Connexion'));
+const Navbar = React.lazy(() => import('./Components/Navbar'));
+const Accueil = React.lazy(() => import('./Pages/Accueil'));
+// const About = React.lazy(() => import("./Pages/About"));
+const Footer = React.lazy(() => import('./Components/Footer'));
 
 axios.defaults.withCredentials = true;
 function App() {
@@ -23,6 +25,7 @@ function App() {
           <Route exact path="/" element={<Accueil />} />
           <Route exact path="/inscription" element={<Inscription />} />
           <Route exact path="/connexion" element={<Connexion />} />
+          <Route exact path="/about" element={<About />} />
         </Routes>
         {/* Footer */}
         <Footer />

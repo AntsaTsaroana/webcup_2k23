@@ -1,10 +1,13 @@
-import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
-import headerVideo from "../Assets/video/headerVideo.mp4";
-import "../Assets/css/pageLoadReveal.scss";
-import "../Assets/css/accueil.scss";
+import headerVideo from '../Assets/video/headerVideo.mp4';
+import descriptionImg from '../Assets/img/Description/descriptionImg.jpg';
+import quotes from '../Assets/img/Comment/quotes.png';
+import '../Assets/css/pageLoadReveal.scss';
+import '../Assets/css/accueil.scss';
 
 const Accueil = () => {
   // gsap.registerPlugin(ScrollTrigger);
@@ -65,20 +68,328 @@ const Accueil = () => {
       <div className="container">
         <header>
           <video src={headerVideo} autoPlay muted loop></video>
-          <div>
+          <div className="soratra">
             <span className="title">
-              <h1>Tiiiiiitre 1</h1>
-              <h1>Tiiiiiiiitre 2</h1>
+              <h1>Votre rêve</h1>
+              <h1>Que signifie t'il?</h1>
             </span>
             <span className="tiret"></span>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
-              accusamus architecto ipsa, autem quidem illum sed vero nam tenetur
-              officia possimus neque minus odio doloribus veritatis! Officia et
-              tempora quod.
+              Comprendre la signification de nos rêves peut nous donner des
+              informations précieuses sur nos pensées, nos sentiments et nos
+              comportements inconscients, ce qui peut nous aider à mieux nous
+              connaître et à mieux naviguer dans notre vie éveillée.
             </p>
+            <div className="social">
+              <Link to="/">Facebook</Link>
+              <Link to="/">Instagram</Link>
+              <Link to="/">Twitter</Link>
+            </div>
           </div>
         </header>
+
+        {/* Section 1 */}
+        <section className="shortDescription">
+          <div className="imgForDescription">
+            <div className="imgForDescription__inner">
+              <img src={descriptionImg} alt="" />
+            </div>
+          </div>
+          <div className="textForDescription">
+            <div>
+              <h1>Description</h1>
+              <br />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                magnam iste maxime cupiditate saepe praesentium illo, sit iusto
+                reiciendis blanditiis nostrum, earum ratione a ut deserunt sed
+                quod rem vitae!
+              </p>
+              <br />
+              <Link to="#">
+                <button className="btnDetailsDescription" s>
+                  Détails
+                </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 2 */}
+        <section className="comment">
+          <div className="comment__inner">
+            <div className="crochet">
+              <img src={quotes} alt="" />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatibus aliquid temporibus odio est dolorum saepe recusandae
+              deserunt porro velit aliquam! Nostrum provident beatae hic ex,
+              dignissimos iste sunt porro voluptatibus.
+            </p>
+            <br />
+            <p className="author">- JAMES Cordon</p>
+          </div>
+          <div className="comment__inner">
+            <div className="crochet">
+              <img src={quotes} alt="" />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatibus aliquid temporibus odio est dolorum saepe recusandae
+              deserunt porro velit aliquam! Nostrum provident beatae hic ex,
+              dignissimos iste sunt porro voluptatibus.
+            </p>
+            <br />
+            <p className="author">- JAMES Cordon</p>
+          </div>
+          <div className="comment__inner">
+            <div className="crochet">
+              <img src={quotes} alt="" />
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatibus aliquid temporibus odio est dolorum saepe recusandae
+              deserunt porro velit aliquam! Nostrum provident beatae hic ex,
+              dignissimos iste sunt porro voluptatibus.
+            </p>
+            <br />
+            <p className="author">- JAMES Cordon</p>
+          </div>
+        </section>
+
+        {/* Section 3 */}
+        <section className="pricingSection">
+          <h1>NOS TARIFS</h1>
+          <div className="plan">
+            <div className="inner">
+              <span className="pricing">
+                <span>
+                  $49 <small>/ m</small>
+                </span>
+              </span>
+              <p className="title">Professional</p>
+              <p className="info">
+                This plan is for those who have a team already and running a
+                large business.
+              </p>
+              <ul className="features">
+                <li>
+                  <span className="icon">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        fill="currentColor"
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>20</strong> team members
+                  </span>
+                </li>
+                <li>
+                  <span className="icon">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        fill="currentColor"
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>
+                    Plan <strong>team meetings</strong>
+                  </span>
+                </li>
+                <li>
+                  <span className="icon">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        fill="currentColor"
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>File sharing</span>
+                </li>
+              </ul>
+              <div className="action">
+                <a className="button" href="#">
+                  Choose plan
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="plan">
+            <div className="inner">
+              <span className="pricing">
+                <span>
+                  $49 <small>/ m</small>
+                </span>
+              </span>
+              <p className="title">Professional</p>
+              <p className="info">
+                This plan is for those who have a team already and running a
+                large business.
+              </p>
+              <ul className="features">
+                <li>
+                  <span className="icon">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        fill="currentColor"
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>20</strong> team members
+                  </span>
+                </li>
+                <li>
+                  <span className="icon">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        fill="currentColor"
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>
+                    Plan <strong>team meetings</strong>
+                  </span>
+                </li>
+                <li>
+                  <span className="icon">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        fill="currentColor"
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>File sharing</span>
+                </li>
+              </ul>
+              <div className="action">
+                <a className="button" href="#">
+                  Choose plan
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="plan">
+            <div className="inner">
+              <span className="pricing">
+                <span>
+                  $49 <small>/ m</small>
+                </span>
+              </span>
+              <p className="title">Professional</p>
+              <p className="info">
+                This plan is for those who have a team already and running a
+                large business.
+              </p>
+              <ul className="features">
+                <li>
+                  <span className="icon">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        fill="currentColor"
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>20</strong> team members
+                  </span>
+                </li>
+                <li>
+                  <span className="icon">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        fill="currentColor"
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>
+                    Plan <strong>team meetings</strong>
+                  </span>
+                </li>
+                <li>
+                  <span className="icon">
+                    <svg
+                      height="24"
+                      width="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        fill="currentColor"
+                        d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"
+                      ></path>
+                    </svg>
+                  </span>
+                  <span>File sharing</span>
+                </li>
+              </ul>
+              <div className="action">
+                <a className="button" href="#">
+                  Choose plan
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
