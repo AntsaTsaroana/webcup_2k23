@@ -1,21 +1,52 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useLayoutEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import $ from 'jquery';
 import API from '../api';
 
 import '../Assets/css/navbar.scss';
 
 const Navbar = () => {
-  const connexion = async () => {
-    await API.get(`webcup/test`)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
+  // ALL REFERENCES :
+  const navbar = useRef();
+
+  useLayoutEffect(() => {
+    // ALL ANIMATION :
+    const ctx = gsap.context(() => {
+      // BUTTON NAVBAR
+      let OK = false;
+      document.querySelector('.toggle-nav').addEventListener('click', () => {
+        if (!OK) {
+          gsap.to('.l1', { y: 0, rotate: 135, duration: 0.1, ease: 'linear' });
+          gsap.to('.l2', { x: -10, scale: 0, duration: 0.1, ease: 'linear' });
+          gsap.to('.l3', { y: 0, rotate: -135, duration: 0.1, ease: 'linear' });
+          gsap.to(`.menuResp`, { left: '10px', ease: 'elastic.out(1, 0.9)' });
+          OK = true;
+        } else {
+          gsap.to('.l1', { y: -10, rotate: 0, duration: 0.1, ease: 'linear' });
+          gsap.to('.l2', { x: 0, scale: 1, duration: 0.1, ease: 'linear' });
+          gsap.to('.l3', { y: 10, rotate: 0, duration: 0.1, ease: 'linear' });
+          gsap.to(`.menuResp`, { left: '-350px' });
+          OK = false;
+        }
       });
-  };
+    }, navbar);
+
+    return () => ctx.revert();
+  }, []);
+
   useEffect(() => {
+    const connexion = async () => {
+      await API.get(`webcup/test`)
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
     connexion();
     $('#menu').css({
       background: 'transparent',
@@ -43,7 +74,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id="menu">
+      <nav id="menu" ref={navbar}>
         <div className="logo">
           <span
             style={{
@@ -83,6 +114,13 @@ const Navbar = () => {
           </button>
         </Link>
       </nav>
+
+      <div className="menuResp">
+        <Link to="/">Accueil</Link>
+        <Link to="/service">Services</Link>
+        <Link to="/about">A-propos</Link>
+        <Link to="/contactUs">Contactez-nous</Link>
+      </div>
     </>
   );
 };
