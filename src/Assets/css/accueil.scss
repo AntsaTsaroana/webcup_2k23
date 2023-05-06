@@ -7,6 +7,7 @@
 }
 
 .container header {
+  position: relative;
   height: 100vh;
 
   &::before {
@@ -32,7 +33,7 @@
     z-index: -1;
   }
 
-  div {
+  div.soratra {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -47,6 +48,8 @@
       top: -60px;
       color: $color_3;
       text-align: center;
+      font-size: 30px;
+      letter-spacing: 5px;
     }
 
     .tiret {
@@ -61,6 +64,14 @@
       text-align: center;
       width: 50%;
       color: white;
+    }
+
+    .social {
+      position: relative;
+      top: 140px;
+      display: flex;
+      gap: 30px;
+      font-size: 15px;
     }
   }
 }

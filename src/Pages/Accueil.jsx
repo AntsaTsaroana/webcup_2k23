@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 import headerVideo from "../Assets/video/headerVideo.mp4";
 import "../Assets/css/pageLoadReveal.scss";
@@ -65,7 +66,7 @@ const Accueil = () => {
       <div className="container">
         <header>
           <video src={headerVideo} autoPlay muted loop></video>
-          <div>
+          <div className="soratra">
             <span className="title">
               <h1>Tiiiiiitre 1</h1>
               <h1>Tiiiiiiiitre 2</h1>
@@ -77,11 +78,18 @@ const Accueil = () => {
               officia possimus neque minus odio doloribus veritatis! Officia et
               tempora quod.
             </p>
-          </div>
-          <div class="eight">
-            <h1>Style Eight</h1>
+            <div className="social">
+              <Link to="/">Facebook</Link>
+              <Link to="/">Instagram</Link>
+              <Link to="/">Twitter</Link>
+            </div>
           </div>
         </header>
+
+        {/* Section 1 */}
+        <section>
+          
+        </section>
       </div>
     </div>
   );
