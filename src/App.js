@@ -4,11 +4,13 @@ import Loading from './Components/Loading';
 import { AuthContext } from './Context/AuthContext';
 import axios from 'axios';
 import { About } from './Pages/About';
+import { Contact } from './Pages/Contact';
 
 const Inscription = React.lazy(() => import('./Pages/Inscription'));
 const Connexion = React.lazy(() => import('./Pages/Connexion'));
 const Navbar = React.lazy(() => import('./Components/Navbar'));
 const Accueil = React.lazy(() => import('./Pages/Accueil'));
+
 // const About = React.lazy(() => import("./Pages/About"));
 const Footer = React.lazy(() => import('./Components/Footer'));
 
@@ -26,6 +28,7 @@ function App() {
           <Route exact path="/inscription" element={<Inscription />} />
           <Route exact path="/connexion" element={<Connexion />} />
           <Route exact path="/about" element={<About />} />
+          <Route exact path="/contactUs" element={<Contact />} />
         </Routes>
         {/* Footer */}
         <Footer />

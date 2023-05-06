@@ -64,7 +64,8 @@ const Navbar = () => {
       } else {
         $('#menu').css({
           opacity: '0.8',
-          background: 'black',
+          background: 'rgb(1 1 1 / 81%)',
+          backdropFilter: 'blur(5.5px)',
           transition: 'background .5s',
         });
         $('#menu a').css('color', '#fff');
@@ -109,9 +110,7 @@ const Navbar = () => {
           <span class="line l3"></span>
         </button>
         <Link to="#">
-          <button className="se_connecter" s>
-            Enregistrement
-          </button>
+          <button className="se_connecter">Enregistrement</button>
         </Link>
       </nav>
 
@@ -120,6 +119,9 @@ const Navbar = () => {
         <Link to="/service">Consultation</Link>
         <Link to="/about">A propos</Link>
         <Link to="/contactUs">Contactez-nous</Link>
+        <Link to="#">
+          <button className="se_connecterResp">Enregistrement</button>
+        </Link>
       </div>
     </>
   );
