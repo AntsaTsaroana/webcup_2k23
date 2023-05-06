@@ -34,7 +34,6 @@ const Navbar = () => {
     <>
       <nav id="menu">
         <div className="logo">
-          Dear{" "}
           <span
             style={{
               color: "#ed156d",
@@ -42,22 +41,23 @@ const Navbar = () => {
               fontWeight: "bolder",
             }}
           >
-            ME.
+            N
           </span>{" "}
+          OFY
         </div>
         <div id="navigation">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Accueil</Link>
             </li>
             <li>
               <Link to="/service">Services</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about">A-propos</Link>
             </li>
             <li>
-              <Link to="/contactUs">Contact Us</Link>
+              <Link to="/contactUs">Contactez-nous</Link>
             </li>
           </ul>
         </div>

@@ -148,13 +148,7 @@
 }
 
 // RESPONSIVE
-@media screen and (max-width: 768px) {
-  .bm-burger-button {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .toggle-nav {
     display: flex;
     justify-content: center;
