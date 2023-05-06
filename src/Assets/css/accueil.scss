@@ -3,9 +3,9 @@
 .container {
   position: relative;
   width: 100vw;
-  height: 100vh;
 }
 
+// HEADER
 .container header {
   position: relative;
   height: 100vh;
@@ -68,18 +68,99 @@
 
     .social {
       position: relative;
-      top: 140px;
+      top: 90px;
       display: flex;
       gap: 30px;
       font-size: 15px;
+      color: $first_color;
+    }
+  }
+}
+
+// SECTION 1
+.shortDescription {
+  @include maxWidth;
+
+  .imgForDescription {
+    width: 300px;
+    height: 350px;
+    background-color: $sec_color;
+    margin: 20px auto;
+    &__inner {
+      position: relative;
+      top: 25px;
+      left: -25px;
+      width: 350px;
+      height: 300px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .textForDescription {
+    width: 85%;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+
+    h1 {
+      color: $color_3;
+    }
+
+    p {
+      color: $sec_color;
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    .btnDetailsDescription {
+      @include button;
+      border: 1px solid $color_3;
+      color: $color_3;
     }
   }
 }
 
 // TABLETTE
 @media screen and (min-width: 767px) {
+  .container header {
+    div.soratra {
+      .social {
+        top: 140px;
+      }
+    }
+  }
 }
 
 // DESKTOP
 @media screen and (min-width: 1280px) {
+  .shortDescription {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .imgForDescription {
+      &__inner {
+        width: 450px;
+        left: -185px;
+      }
+    }
+
+    .textForDescription {
+      display: flex;
+      align-items: center;
+
+      div {
+        width: 50%;
+      }
+
+      p {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
 }

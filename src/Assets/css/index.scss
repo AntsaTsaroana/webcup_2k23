@@ -26,6 +26,11 @@ a {
   cursor: pointer;
 }
 
+@mixin maxWidth {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
 $first_color: #f1f1f1;
 $sec_color: #333;
 $color_3: #3a677c;

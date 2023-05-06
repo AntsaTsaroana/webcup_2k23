@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 
 import headerVideo from "../Assets/video/headerVideo.mp4";
+import descriptionImg from "../Assets/img/Description/descriptionImg.jpg";
 import "../Assets/css/pageLoadReveal.scss";
 import "../Assets/css/accueil.scss";
 
@@ -88,7 +89,29 @@ const Accueil = () => {
 
         {/* Section 1 */}
         <section className="shortDescription">
-
+          <div className="imgForDescription">
+            <div className="imgForDescription__inner">
+              <img src={descriptionImg} alt="" />
+            </div>
+          </div>
+          <div className="textForDescription">
+            <div>
+              <h1>Description</h1>
+              <br />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                magnam iste maxime cupiditate saepe praesentium illo, sit iusto
+                reiciendis blanditiis nostrum, earum ratione a ut deserunt sed
+                quod rem vitae!
+              </p>
+              <br />
+              <Link to="#">
+                <button className="btnDetailsDescription" s>
+                  Détails
+                </button>
+              </Link>
+            </div>
+          </div>
         </section>
       </div>
     </div>
