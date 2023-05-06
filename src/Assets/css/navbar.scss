@@ -1,9 +1,187 @@
 @import "../css/index.scss";
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    background-color: #ff000038;
+//--------------------------- NAVBAR -----------------------------//
+.logo {
+  display: flex;
+  align-items: center;
+  width: 8%;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  width: 100%;
+  height: 65px;
+  padding-left: 18px;
+  border-radius: 0px;
+  transition: background-color 0.5s ease;
+  z-index: 3;
+}
+#navigation {
+  position: relative;
+  margin: 0 auto;
+  left: -5%;
+}
+
+#menu ul,
+#menu li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+#menu ul {
+  width: 100%;
+}
+#menu li {
+  float: left;
+  display: inline;
+  position: relative;
+}
+#menu a {
+  display: block;
+  line-height: 65px;
+  padding: 0 14px;
+  text-decoration: none;
+  font-size: 14px;
+}
+#menu a.dropdown-arrow:after {
+  content: "\2193";
+  margin-left: 5px;
+}
+#menu li a {
+  transition: 0.3s ease-out;
+}
+#menu li a:hover {
+  transform: scale(1.3);
+}
+#menu input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 65px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+#menu label {
+  display: none;
+  line-height: 65px;
+  text-align: center;
+  position: absolute;
+  left: 35px;
+}
+#menu label:before {
+  font-size: 1.6em;
+  content: "\2261";
+  margin-left: 20px;
+}
+#menu ul.sub-menus {
+  height: auto;
+  overflow: hidden;
+  width: 170px;
+  background: #444444;
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+#menu ul.sub-menus li {
+  display: block;
+  width: 100%;
+}
+#menu ul.sub-menus a {
+  color: #ffffff;
+  font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+  display: block;
+}
+#menu ul.sub-menus a:hover {
+  background: #f2f2f2;
+  color: #444444;
+}
+
+// BUTTON SE CONNECTER
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  border: 3px solid rgb(252, 70, 100);
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(252, 70, 100);
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: translateX(0);
+}
+
+// BUTTON RESPONSIVE
+.toggle-nav {
+  position: fixed;
+  top: 7px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  background: transparent;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #222;
+  transition: transform 0.3s ease-out, opacity 0.1s ease-in;
+}
+
+.l1 {
+  transform: translateY(-10px);
+}
+
+.l3 {
+  transform: translateY(10px);
+}
+
+// RESPONSIVE
+@media screen and (max-width: 768px) {
+  .bm-burger-button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .bm-burger-button {
+    display: block;
+  }
+  #navigation {
+    display: none;
+  }
 }
