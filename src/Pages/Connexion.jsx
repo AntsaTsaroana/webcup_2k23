@@ -1,16 +1,32 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../Context/AuthContext';
+import API from '../api';
+import { useNavigate } from 'react-router-dom';
 
 const Connexion = () => {
+  const { fetchUser } = useContext(AuthContext);
+  const redirect = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    try {
+      const loginData = {
+        email,
+        password,
+      };
 
-    // Votre logique d'inscription ici
-    console.log(email);
-    console.log(password);
+      const ClientConnexion = await API.post(
+        `${process.env.REACT_APP_API_URL}api/user/entreprise/login`,
+        loginData
+      );
+
+      await fetchUser();
+      redirect('/dashEntreprise');
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
