@@ -78,9 +78,9 @@ const Navbar = () => {
         <div className="logo">
           <span
             style={{
-              color: '#ed156d',
-              paddingLeft: '5px',
-              fontWeight: 'bolder',
+              color: "#3A677C",
+              paddingLeft: "5px",
+              fontWeight: "bolder",
             }}
           >
             N
@@ -108,7 +108,7 @@ const Navbar = () => {
           <span class="line l2"></span>
           <span class="line l3"></span>
         </button>
-        <Link to="/login">
+        <Link to="#">
           <button className="se_connecter" s>
             Se connecter
           </button>
