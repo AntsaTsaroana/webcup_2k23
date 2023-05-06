@@ -85,7 +85,7 @@
   .imgForDescription {
     width: 300px;
     height: 350px;
-    background-color: $sec_color;
+    background-color: #ecf2ff;
     margin: 20px auto;
     &__inner {
       position: relative;
@@ -109,6 +109,7 @@
     text-align: center;
 
     h1 {
+      @include title_h1;
       color: $color_3;
     }
 
@@ -172,6 +173,18 @@
   padding: 50px 0;
   flex-direction: column;
   align-items: center;
+
+  span.titlePrice {
+    width: 100%;
+    margin-bottom: 20px;
+
+    h1 {
+      @include title_h1;
+      text-align: center;
+      font-size: 25px;
+      color: $color_3;
+    }
+  }
 
   .plan {
     border-radius: 16px;
@@ -269,7 +282,7 @@
       justify-content: end;
     }
     .button {
-      background-color: #6558d3;
+      background-color: $color_3;
       border-radius: 6px;
       color: #fff;
       font-weight: 500;
