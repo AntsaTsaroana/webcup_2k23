@@ -56,19 +56,19 @@ const Footer = () => {
 
             <ul class="nav__ul nav__ul--extra">
               <li>
-                <Link to="#">Accueil</Link>
+                <Link to="/">Accueil</Link>
               </li>
 
               <li>
-                <Link to="#">Consultation</Link>
+                <Link to="/service">Consultation</Link>
               </li>
 
               <li>
-                <Link to="#">A propos</Link>
+                <Link to="/about">A propos</Link>
               </li>
 
               <li>
-                <Link to="#">Contactez-nous</Link>
+                <Link to="/contactUs">Contactez-nous</Link>
               </li>
             </ul>
           </li>

@@ -158,6 +158,11 @@
     display: none;
   }
 
+  .se_connecterResp {
+    @include button;
+    display: block;
+  }
+
   .se_connecter {
     display: none;
   }
@@ -168,15 +173,15 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    top: 10px;
+    top: 75px;
     left: -350px;
     width: 50vw;
-    height: 96vh;
+    height: 85vh;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(1 1 1 / 46%);
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
-    z-index: 3;
+    z-index: 100;
 
     a {
       text-decoration: none;

@@ -1,13 +1,13 @@
-import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Link } from "react-router-dom";
+import { useLayoutEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
-import headerVideo from "../Assets/video/headerVideo.mp4";
-import descriptionImg from "../Assets/img/Description/descriptionImg.jpg";
-import quotes from "../Assets/img/Comment/quotes.png";
-import "../Assets/css/pageLoadReveal.scss";
-import "../Assets/css/accueil.scss";
+import headerVideo from '../Assets/video/headerVideo.mp4';
+import descriptionImg from '../Assets/img/Description/descriptionImg.jpg';
+import quotes from '../Assets/img/Comment/quotes.png';
+import '../Assets/css/pageLoadReveal.scss';
+import '../Assets/css/accueil.scss';
 
 const Accueil = () => {
   // gsap.registerPlugin(ScrollTrigger);
@@ -70,15 +70,15 @@ const Accueil = () => {
           <video src={headerVideo} autoPlay muted loop></video>
           <div className="soratra">
             <span className="title">
-              <h1>Tiiiiiitre 1</h1>
-              <h1>Tiiiiiiiitre 2</h1>
+              <h1>Votre rêve</h1>
+              <h1>Que signifie t'il?</h1>
             </span>
             <span className="tiret"></span>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum
-              accusamus architecto ipsa, autem quidem illum sed vero nam tenetur
-              officia possimus neque minus odio doloribus veritatis! Officia et
-              tempora quod.
+              Comprendre la signification de nos rêves peut nous donner des
+              informations précieuses sur nos pensées, nos sentiments et nos
+              comportements inconscients, ce qui peut nous aider à mieux nous
+              connaître et à mieux naviguer dans notre vie éveillée.
             </p>
             <div className="social">
               <Link to="/">Facebook</Link>
