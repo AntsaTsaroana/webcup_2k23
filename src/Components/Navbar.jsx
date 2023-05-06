@@ -109,7 +109,7 @@ const Navbar = () => {
           <span class="line l2"></span>
           <span class="line l3"></span>
         </button>
-        <Link to="#">
+        <Link to="/enregistrement">
           <button className="se_connecter">Enregistrement</button>
         </Link>
       </nav>
@@ -119,7 +119,7 @@ const Navbar = () => {
         <Link to="/service">Consultation</Link>
         <Link to="/about">A propos</Link>
         <Link to="/contactUs">Contactez-nous</Link>
-        <Link to="#">
+        <Link to="/enregistrement">
           <button className="se_connecterResp">Enregistrement</button>
         </Link>
       </div>

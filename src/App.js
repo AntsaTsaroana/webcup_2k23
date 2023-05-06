@@ -7,8 +7,8 @@ import { Contact } from "./Pages/Contact";
 
 const Navbar = React.lazy(() => import("./Components/Navbar"));
 const Accueil = React.lazy(() => import("./Pages/Accueil"));
-// const About = React.lazy(() => import("./Pages/About"));
 const Footer = React.lazy(() => import("./Components/Footer"));
+const Enregistrement = React.lazy(() => import("./Pages/Enregistrement"));
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
           <Route exact path="/" element={<Accueil />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contactUs" element={<Contact />} />
+          <Route exact path="/enregistrement" element={<Enregistrement />} />
         </Routes>
         {/* Footer */}
         <Footer />
