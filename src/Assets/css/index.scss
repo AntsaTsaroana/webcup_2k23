@@ -9,22 +9,21 @@
 //   border: 1px dashed red;
 }
 
-html::-webkit-scrollbar {
-  width: 9px;
-}
+// html::-webkit-scrollbar {
+//   width: 9px;
+// }
 
-html::-webkit-scrollbar-track {
-  border-radius: 8px;
-}
+// html::-webkit-scrollbar-track {
+//   border-radius: 8px;
+// }
 
-html::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(.5, #a520ca), color-stop(1, #2681cc));
-}
+// html::-webkit-scrollbar-thumb {
+//   border-radius: 8px;
+//   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(.5, #a520ca), color-stop(1, #2681cc));
+// }
 
 // GLOBAL MODIFICATION :
 body {
-  background-color: teal;
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }
