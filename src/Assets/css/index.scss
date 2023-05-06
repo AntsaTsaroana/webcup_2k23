@@ -31,6 +31,11 @@ a {
   margin: 0 auto;
 }
 
+@mixin title_h1 {
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
 $first_color: #f1f1f1;
 $sec_color: #333;
 $color_3: #3a677c;
