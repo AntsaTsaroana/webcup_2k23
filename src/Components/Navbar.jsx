@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useLayoutEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import $ from "jquery";
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useLayoutEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import $ from 'jquery';
+import API from '../api';
 
-import "../Assets/css/navbar.scss";
+import '../Assets/css/navbar.scss';
 
 const Navbar = () => {
   // ALL REFERENCES :
@@ -16,18 +17,18 @@ const Navbar = () => {
     const ctx = gsap.context(() => {
       // BUTTON NAVBAR
       let OK = false;
-      document.querySelector(".toggle-nav").addEventListener("click", () => {
+      document.querySelector('.toggle-nav').addEventListener('click', () => {
         if (!OK) {
-          gsap.to(".l1", { y: 0, rotate: 135, duration: 0.1, ease: "linear" });
-          gsap.to(".l2", { x: -10, scale: 0, duration: 0.1, ease: "linear" });
-          gsap.to(".l3", { y: 0, rotate: -135, duration: 0.1, ease: "linear" });
-          gsap.to(`.menuResp`, { left: "10px", ease: "elastic.out(1, 0.9)" });
+          gsap.to('.l1', { y: 0, rotate: 135, duration: 0.1, ease: 'linear' });
+          gsap.to('.l2', { x: -10, scale: 0, duration: 0.1, ease: 'linear' });
+          gsap.to('.l3', { y: 0, rotate: -135, duration: 0.1, ease: 'linear' });
+          gsap.to(`.menuResp`, { left: '10px', ease: 'elastic.out(1, 0.9)' });
           OK = true;
         } else {
-          gsap.to(".l1", { y: -10, rotate: 0, duration: 0.1, ease: "linear" });
-          gsap.to(".l2", { x: 0, scale: 1, duration: 0.1, ease: "linear" });
-          gsap.to(".l3", { y: 10, rotate: 0, duration: 0.1, ease: "linear" });
-          gsap.to(`.menuResp`, { left: "-350px" });
+          gsap.to('.l1', { y: -10, rotate: 0, duration: 0.1, ease: 'linear' });
+          gsap.to('.l2', { x: 0, scale: 1, duration: 0.1, ease: 'linear' });
+          gsap.to('.l3', { y: 10, rotate: 0, duration: 0.1, ease: 'linear' });
+          gsap.to(`.menuResp`, { left: '-350px' });
           OK = false;
         }
       });
@@ -37,26 +38,36 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    $("#menu").css({
-      background: "transparent",
-      transition: "background .5s",
+    const connexion = async () => {
+      await API.get(`webcup/test`)
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    connexion();
+    $('#menu').css({
+      background: 'transparent',
+      transition: 'background .5s',
     });
-    $("#menu a").css("color", "#fff");
+    $('#menu a').css('color', '#fff');
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY < 120) {
-        $("#menu").css({
-          background: "transparent",
-          transition: "background .5s",
+        $('#menu').css({
+          background: 'transparent',
+          transition: 'background .5s',
         });
-        $("#menu a").css("color", "#fff");
+        $('#menu a').css('color', '#fff');
       } else {
-        $("#menu").css({
-          opacity: "0.8",
-          background: "black",
-          transition: "background .5s",
+        $('#menu').css({
+          opacity: '0.8',
+          background: 'black',
+          transition: 'background .5s',
         });
-        $("#menu a").css("color", "#fff");
+        $('#menu a').css('color', '#fff');
       }
     });
   }, []);
@@ -73,7 +84,7 @@ const Navbar = () => {
             }}
           >
             N
-          </span>{" "}
+          </span>{' '}
           OFY
         </div>
         <div id="navigation">
@@ -98,7 +109,9 @@ const Navbar = () => {
           <span class="line l3"></span>
         </button>
         <Link to="/login">
-          <button className="se_connecter">Se connecter</button>
+          <button className="se_connecter" s>
+            Se connecter
+          </button>
         </Link>
       </nav>
 
