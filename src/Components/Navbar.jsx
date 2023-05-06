@@ -61,12 +61,14 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        {/* <button type="button" aria-label="burger Menu" class="toggle-nav">
+        <button type="button" aria-label="burger Menu" className="toggle-nav">
           <span class="line l1"></span>
           <span class="line l2"></span>
           <span class="line l3"></span>
-        </button> */}
-        <Link to="/login" className="btn">I am a button</Link>
+        </button>
+        <Link to="/login">
+          <button className="se_connecter">Se connecter</button>
+        </Link>
       </nav>
     </>
   );
