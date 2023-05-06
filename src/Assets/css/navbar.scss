@@ -105,15 +105,10 @@
 
 // BUTTON SE CONNECTER
 .se_connecter {
+  @include button;
   position: fixed;
   top: 13px;
   right: 30px;
-  background: transparent;
-  outline: none;
-  border: 1px solid #f1f1f1;
-  color: #f1f1f1;
-  padding: 10px;
-  border-radius: 5px;
 }
 
 // BUTTON RESPONSIVE
@@ -148,7 +143,7 @@
 }
 
 .menuResp {
-    display: none;
+  display: none;
 }
 
 // RESPONSIVE

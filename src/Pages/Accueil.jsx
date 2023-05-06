@@ -87,8 +87,8 @@ const Accueil = () => {
         </header>
 
         {/* Section 1 */}
-        <section>
-          
+        <section className="shortDescription">
+
         </section>
       </div>
     </div>
