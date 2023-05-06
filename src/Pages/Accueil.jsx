@@ -160,15 +160,18 @@ const Accueil = () => {
 
         {/* Section 3 */}
         <section className="pricingSection">
-          <h1>NOS TARIFS</h1>
+          <span className="titlePrice">
+            {" "}
+            <h1>NOS TARIFS</h1>
+          </span>
           <div className="plan">
             <div className="inner">
               <span className="pricing">
                 <span>
-                  $49 <small>/ m</small>
+                  $10 <small>/ m</small>
                 </span>
               </span>
-              <p className="title">Professional</p>
+              <p className="title">Bronze</p>
               <p className="info">
                 This plan is for those who have a team already and running a
                 large business.
@@ -208,7 +211,7 @@ const Accueil = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span>
+                  <span style={{ textDecoration: "line-through" }}>
                     Plan <strong>team meetings</strong>
                   </span>
                 </li>
@@ -227,13 +230,15 @@ const Accueil = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span>File sharing</span>
+                  <span style={{ textDecoration: "line-through" }}>
+                    File sharing
+                  </span>
                 </li>
               </ul>
               <div className="action">
-                <a className="button" href="#">
-                  Choose plan
-                </a>
+                <Link className="button" to="#">
+                  Choisir plan
+                </Link>
               </div>
             </div>
           </div>
@@ -241,10 +246,10 @@ const Accueil = () => {
             <div className="inner">
               <span className="pricing">
                 <span>
-                  $49 <small>/ m</small>
+                  $50 <small>/ m</small>
                 </span>
               </span>
-              <p className="title">Professional</p>
+              <p className="title">Silver</p>
               <p className="info">
                 This plan is for those who have a team already and running a
                 large business.
@@ -303,13 +308,15 @@ const Accueil = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span>File sharing</span>
+                  <span style={{ textDecoration: "line-through" }}>
+                    File sharing
+                  </span>
                 </li>
               </ul>
               <div className="action">
-                <a className="button" href="#">
-                  Choose plan
-                </a>
+                <Link className="button" to="#">
+                  Choisir plan
+                </Link>
               </div>
             </div>
           </div>
@@ -317,10 +324,10 @@ const Accueil = () => {
             <div className="inner">
               <span className="pricing">
                 <span>
-                  $49 <small>/ m</small>
+                  $100 <small>/ m</small>
                 </span>
               </span>
-              <p className="title">Professional</p>
+              <p className="title">Gold</p>
               <p className="info">
                 This plan is for those who have a team already and running a
                 large business.
@@ -383,9 +390,9 @@ const Accueil = () => {
                 </li>
               </ul>
               <div className="action">
-                <a className="button" href="#">
-                  Choose plan
-                </a>
+                <Link className="button" to="#">
+                  Choisir plan
+                </Link>
               </div>
             </div>
           </div>
