@@ -4,12 +4,6 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-
-  h1 {
-    position: relative;
-    width: max-content;
-    color: crimson;
-  }
 }
 
 .container header {
@@ -44,7 +38,6 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: rgb(255 0 0 / 27%);
     z-index: 2;
     flex-direction: column;
     align-items: center;
@@ -52,6 +45,8 @@
     .title {
       position: relative;
       top: -60px;
+      color: $color_3;
+      text-align: center;
     }
 
     .tiret {
@@ -59,12 +54,13 @@
       top: -27px;
       width: 2px;
       height: 90px;
-      background-color: #f1f1f1;
+      background-color: $first_color;
     }
 
     p {
       text-align: center;
       width: 50%;
+      color: white;
     }
   }
 }

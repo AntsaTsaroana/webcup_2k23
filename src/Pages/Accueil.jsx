@@ -78,6 +78,9 @@ const Accueil = () => {
               tempora quod.
             </p>
           </div>
+          <div class="eight">
+            <h1>Style Eight</h1>
+          </div>
         </header>
       </div>
     </div>

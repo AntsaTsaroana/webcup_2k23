@@ -67,7 +67,7 @@ const Navbar = () => {
         <div className="logo">
           <span
             style={{
-              color: "#ed156d",
+              color: "#3A677C",
               paddingLeft: "5px",
               fontWeight: "bolder",
             }}
