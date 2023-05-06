@@ -1,13 +1,15 @@
 import React from 'react'
 import '../Assets/css/about.scss'
+import teamMeeting from '../Assets/video/team.mp4'
 
 export const About = () => {
   return (
     <>
       <section className="about">
         <div className="header">
-          <h2>About Us</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam ea repellendus repudiandae necessitatibus quod possimus sed laborum, veniam cumque inventore.</p>
+        <video src={teamMeeting} autoPlay muted loop></video>
+          <h2>A propos</h2>
+          <p>Curieux de savoir qui se cache derrière notre entreprise ? Découvrez notre équipe et notre histoire.</p>
           
         </div>
         <div className="institute">
