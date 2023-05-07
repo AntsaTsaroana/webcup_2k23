@@ -161,7 +161,7 @@ const Accueil = () => {
         {/* Section 3 */}
         <section className="pricingSection">
           <span className="titlePrice">
-            {" "}
+            {' '}
             <h1>NOS TARIFS</h1>
           </span>
           <div className="plan">
@@ -211,7 +211,7 @@ const Accueil = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span style={{ textDecoration: "line-through" }}>
+                  <span style={{ textDecoration: 'line-through' }}>
                     Plan <strong>team meetings</strong>
                   </span>
                 </li>
@@ -230,7 +230,7 @@ const Accueil = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span style={{ textDecoration: "line-through" }}>
+                  <span style={{ textDecoration: 'line-through' }}>
                     File sharing
                   </span>
                 </li>
@@ -308,7 +308,7 @@ const Accueil = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span style={{ textDecoration: "line-through" }}>
+                  <span style={{ textDecoration: 'line-through' }}>
                     File sharing
                   </span>
                 </li>

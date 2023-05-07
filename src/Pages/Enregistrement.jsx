@@ -1,17 +1,17 @@
-import React, { useRef } from "react";
-import { Link } from "react-router-dom";
-
-import "../Assets/css/enregistrement.scss";
+import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../Assets/css/enregistrement.scss';
+import axios from '../api';
 
 const Enregistrement = () => {
   const container = useRef(null);
 
   const signUp = () => {
-    container.current.classList.add("right-panel-active");
+    container.current.classList.add('right-panel-active');
   };
 
   const signIn = () => {
-    container.current.classList.remove("right-panel-active");
+    container.current.classList.remove('right-panel-active');
   };
 
   //   useEffect(() => {
@@ -28,17 +28,68 @@ const Enregistrement = () => {
   //     });
   //   }, []);
 
+  const [lastName, setLastName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+
+  const inscription = async (event) => {
+    event.preventDefault();
+    if (password === confirmPassword) {
+      await axios
+        .post('webcup/api/users', {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          password: password,
+        })
+        .then((res) => {
+          console.log('Inscription avec succès');
+        })
+        .catch((error) => console.error(error));
+    } else {
+      alert('Les deux mots de passes ne sont pas identiques');
+    }
+  };
+
   return (
     <>
       <div className="enregistrement">
         <div className="containerEnregistrement" id="container" ref={container}>
           <div className="form-container sign-up-container">
-            <form action="#">
+            <form action="#" onSubmit={inscription}>
               <h1>Créer Compte</h1>
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Last Name" />
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
+              <input
+                type="text"
+                placeholder="Votre nom"
+                value={lastName}
+                onChange={(event) => setLastName(event.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="Votre prénom"
+                value={firstName}
+                onChange={(event) => setFirstName(event.target.value)}
+              />
+              <input
+                type="email"
+                placeholder="Votre adresse email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="Votre mot de passe"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="Confirmation de mot de passe"
+                value={confirmPassword}
+                onChange={(event) => setConfirmPassword(event.target.value)}
+              />
               <button>S'inscrire</button>
             </form>
           </div>
