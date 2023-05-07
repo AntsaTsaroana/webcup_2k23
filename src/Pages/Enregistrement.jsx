@@ -36,6 +36,7 @@ const Enregistrement = () => {
             <form action="#">
               <h1>Créer Compte</h1>
               <input type="text" placeholder="Name" />
+              <input type="text" placeholder="Last Name" />
               <input type="email" placeholder="Email" />
               <input type="password" placeholder="Password" />
               <button>S'inscrire</button>

@@ -94,7 +94,7 @@ const Navbar = () => {
               <Link to="/">Accueil</Link>
             </li>
             <li>
-              <Link to="/service">Consultation</Link>
+              <Link to="/consultation">Consultation</Link>
             </li>
             <li>
               <Link to="/about">A propos</Link>
@@ -116,7 +116,7 @@ const Navbar = () => {
 
       <div className="menuResp">
         <Link to="/">Accueil</Link>
-        <Link to="/service">Consultation</Link>
+        <Link to="/consultation">Consultation</Link>
         <Link to="/about">A propos</Link>
         <Link to="/contactUs">Contactez-nous</Link>
         <Link to="/enregistrement">
