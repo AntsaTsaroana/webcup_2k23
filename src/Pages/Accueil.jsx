@@ -70,8 +70,8 @@ const Accueil = () => {
           <video src={headerVideo} autoPlay muted loop></video>
           <div className="soratra">
             <span className="title">
-              <h1>Votre rêve</h1>
-              <h1>Que signifie t'il?</h1>
+              <h1>Le rêve est la réalisation</h1>
+              <h1>anticipée d'un désir</h1>
             </span>
             <span className="tiret"></span>
             <p>
@@ -100,10 +100,7 @@ const Accueil = () => {
               <h1>Description</h1>
               <br />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                magnam iste maxime cupiditate saepe praesentium illo, sit iusto
-                reiciendis blanditiis nostrum, earum ratione a ut deserunt sed
-                quod rem vitae!
+              Si vous êtes intéressé par l'interprétation des rêves, il peut être utile de tenir un journal de vos rêves et de noter les émotions, les personnes et les événements que vous y rencontrez. Cela peut vous aider à repérer des thèmes récurrents et à mieux comprendre les significations potentielles de vos rêves.
               </p>
               <br />
               <Link to="#">
@@ -122,39 +119,30 @@ const Accueil = () => {
               <img src={quotes} alt="" />
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptatibus aliquid temporibus odio est dolorum saepe recusandae
-              deserunt porro velit aliquam! Nostrum provident beatae hic ex,
-              dignissimos iste sunt porro voluptatibus.
+            "Tous les hommes rêvent, mais pas de la même façon. Ceux qui rêvent la nuit dans les recoins poussiéreux de leur esprit s'éveillent le jour pour découvrir que ce n'était que vanité. Mais les rêveurs diurnes sont dangereux, car ils peuvent réaliser leur rêve les yeux ouverts, pour le rendre possible." 
             </p>
             <br />
-            <p className="author">- JAMES Cordon</p>
+            <p className="author">- T.E. Lawrence</p>
           </div>
           <div className="comment__inner">
             <div className="crochet">
               <img src={quotes} alt="" />
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptatibus aliquid temporibus odio est dolorum saepe recusandae
-              deserunt porro velit aliquam! Nostrum provident beatae hic ex,
-              dignissimos iste sunt porro voluptatibus.
+            "Les rêves sont des étoiles invisibles... chaque nuit, nous les observons avec émerveillement et pourtant, au réveil, nous oublions rapidement leur beauté."
             </p>
             <br />
-            <p className="author">- JAMES Cordon</p>
+            <p className="author">- Mundia Ngumi</p>
           </div>
           <div className="comment__inner">
             <div className="crochet">
               <img src={quotes} alt="" />
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Voluptatibus aliquid temporibus odio est dolorum saepe recusandae
-              deserunt porro velit aliquam! Nostrum provident beatae hic ex,
-              dignissimos iste sunt porro voluptatibus.
+            « Sur le moment, le confort des habitudes peut donner le sentiment d’être heureux. Mais, avec le recul, ce sentiment apparaît en fait comme une illusion. D’où l’importance de sortir des sentiers battus et de se demander, chaque jour, ce qu’on a vraiment envie de faire. »
             </p>
             <br />
-            <p className="author">- JAMES Cordon</p>
+            <p className="author">- Bronnie Ware</p>
           </div>
         </section>
 

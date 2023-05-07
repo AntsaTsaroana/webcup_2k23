@@ -66,17 +66,14 @@ const Consultation = () => {
         </div>
       </div>
       <div className="consultation">
-        <img src={imgPsycho} alt="Psyhcologue" />
+        <img src={imgPsycho} alt="Psyhcologue"/>
         <div className="titleConsultation">
           <span className="title">
-            <h1>TIIIITRE 1</h1>
-            <h1>TIIIITRE 2</h1>
+            <h1>Trouver l'équilibre</h1>
+            <h1>intérieur</h1>
           </span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-            blanditiis, et officia laudantium provident velit recusandae
-            corporis quidem in excepturi laboriosam itaque architecto quas
-            labore deserunt inventore quos, expedita alias?
+          Dans cette consultation, nous allons discuter de vos sources de stress, de vos réactions face au stress et de différentes stratégies pour mieux gérer vos émotions et votre anxiété. Nous allons également explorer des techniques de relaxation et de respiration pour vous aider à vous sentir plus calme et plus serein. Je suis là pour vous écouter et vous soutenir dans cette démarche. N'hésitez pas à me poser des questions ou à partager vos préoccupations.
           </p>
           <Link to="#">
             <button className="btnConsultation">Contacter le Psy</button>
