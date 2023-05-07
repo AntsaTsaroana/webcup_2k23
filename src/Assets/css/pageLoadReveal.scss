@@ -5,7 +5,7 @@
 	z-index: 100;
 	width: 100vw;
 	height: 100vh;
-	background: #e0b289;
+	background: $color_3;
 	pointer-events: none;
 }
 .anim-bloc {
@@ -28,7 +28,6 @@
 	h2 {
 		padding: 10px 30px;
 		color: #222;
-		font-family: Playfair Display, serif;
 		font-size: 40px;
 		text-transform: uppercase;
 		transform: translateY(100px);
@@ -51,10 +50,10 @@
 	position: absolute;
 }
 .flip-img1 {
-	background-image: url(../img/pageLoadReveal/image1.webp);
+	background-image: url(../img/pageLoadReveal/image2.webp);
 }
 .flip-img2 {
-	background-image: url(../img/pageLoadReveal/image2.webp);
+	background-image: url(../img/pageLoadReveal/image1.webp);
 }
 .flip {
 	width: 100%;
@@ -63,7 +62,7 @@
 	position: absolute;
 }
 .f2 {
-	background: #9b1339;
+	background: #102129;
 }
 @media screen and (max-width: 500px) {
 	.anim-bloc {
