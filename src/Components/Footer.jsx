@@ -26,9 +26,9 @@ const Footer = () => {
           <address>
             Dream Somewhere In. The World 
             <br />
-            <a class="footer__btn" href="mailto:example@gmail.com">
+            <Link to="/contactUs" class="footer__btn" href="mailto:example@gmail.com">
               Email
-            </a>
+            </Link>
           </address>
         </div>
 
