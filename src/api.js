@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: `https://api-sbeauty.smartpredict.ai/`,
+  baseURL: `https://retina.madagascar.webcup.hodi.host/  `,
 });

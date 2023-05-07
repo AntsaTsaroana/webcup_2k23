@@ -71,6 +71,7 @@ const Enregistrement = () => {
           lastName: lastName,
           email: email,
           password: password,
+          passwordConfirmation:confirmPassword
         })
         .then((res) => {
           console.log('Inscription avec succès');
@@ -80,6 +81,8 @@ const Enregistrement = () => {
       alert('Les deux mots de passes ne sont pas identiques');
     }
   };
+
+  mongodb://sbeautyApp:pASS2022@api-sbeauty.smartpredict.ai:27017/?authMechanism=SCRAM-SHA-1&authSource=sbeauty
 
   return (
     <>
