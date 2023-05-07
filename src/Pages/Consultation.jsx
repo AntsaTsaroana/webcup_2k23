@@ -37,9 +37,76 @@ const Consultation = () => {
         .add(() => {
           document.querySelector(".load-container").style.display = "none";
         })
-        .to(`h1`, {
-          top: 0,
-          duration: 0.5,
+        .to(`.title`, {
+          right: 0,
+          duration: 0.8,
+          onComplete: () => {
+            gsap.to(".title", {
+              right: "-75%",
+              duration: 1,
+              scrollTrigger: {
+                trigger: ".conseil",
+                scrub: true,
+              },
+            });
+          },
+        })
+        .to(
+          ".titleConsultation p",
+          {
+            top: 0,
+            opacity: 1,
+            duration: 1,
+            onComplete: () => {
+              gsap.to(".titleConsultation p", {
+                left: "-75%",
+                opacity: 0,
+                duration: 1,
+                scrollTrigger: {
+                  trigger: ".conseil",
+                  scrub: true,
+                },
+              });
+            },
+          },
+          "-=0.35"
+        )
+        .to(
+          ".btnConsultation",
+          {
+            top: 0,
+            opacity: 1,
+            duration: 0.5,
+            onComplete: () => {
+              gsap.to(".btnConsultation", {
+                y: 200,
+                opacity: 0,
+                duration: 1,
+                ease: "linear",
+                scrollTrigger: {
+                  trigger: ".conseil",
+                  scrub: true,
+                },
+              });
+            },
+          },
+          "-=0.35"
+        )
+        .to(`.mouse_scroll`, {
+          bottom: 0,
+          opacity: 1,
+          duration: 0.8,
+          onComplete: () => {
+            gsap.to(".mouse_scroll", {
+              y: 50,
+              transform: "scale(0)",
+              duration: 1,
+              scrollTrigger: {
+                trigger: ".conseil",
+                scrub: true,
+              },
+            });
+          },
         });
     }, container);
 
@@ -64,57 +131,57 @@ const Consultation = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="consultation">
-        <img src={imgPsycho} alt="Psyhcologue" />
-        <div className="titleConsultation">
-          <span className="title">
-            <h1>TIIIITRE 1</h1>
-            <h1>TIIIITRE 2</h1>
-          </span>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-            blanditiis, et officia laudantium provident velit recusandae
-            corporis quidem in excepturi laboriosam itaque architecto quas
-            labore deserunt inventore quos, expedita alias?
-          </p>
-          <Link to="#">
-            <button className="btnConsultation">Contacter le Psy</button>
-          </Link>
-          <div className="mouse_scroll">
-            <div className="mouse">
-              <div className="wheel"></div>
-            </div>
-            <div>
-              <span className="m_scroll_arrows unu"></span>
-              <span className="m_scroll_arrows doi"></span>
-              <span className="m_scroll_arrows trei"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* SECTION CONSEIL */}
-      <section className="conseil">
-        <div className="imgForConseil">
-          <div className="imgForConseil__inner">
-            <img src={docImg} alt="" />
-          </div>
-        </div>
-        <div className="textForConseil">
-          <div>
-            <h1>Conseil</h1>
-            <br />
+        <div className="consultation">
+          <img src={imgPsycho} alt="Psyhcologue" />
+          <div className="titleConsultation">
+            <span className="title">
+              <h1>TIIIITRE 1</h1>
+              <h1>TIIIITRE 2</h1>
+            </span>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              magnam iste maxime cupiditate saepe praesentium illo, sit iusto
-              reiciendis blanditiis nostrum, earum ratione a ut deserunt sed
-              quod rem vitae!
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+              blanditiis, et officia laudantium provident velit recusandae
+              corporis quidem in excepturi laboriosam itaque architecto quas
+              labore deserunt inventore quos, expedita alias?
             </p>
-            <br />
-            <h3 style={{ color: "#3a677c" }}>Dr ANDREW </h3>
+            <Link to="#">
+              <button className="btnConsultation">Contacter le Psy</button>
+            </Link>
+            <div className="mouse_scroll">
+              <div className="mouse">
+                <div className="wheel"></div>
+              </div>
+              <div>
+                <span className="m_scroll_arrows unu"></span>
+                <span className="m_scroll_arrows doi"></span>
+                <span className="m_scroll_arrows trei"></span>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+        {/* SECTION CONSEIL */}
+        <section className="conseil">
+          <div className="imgForConseil">
+            <div className="imgForConseil__inner">
+              <img src={docImg} alt="" />
+            </div>
+          </div>
+          <div className="textForConseil">
+            <div>
+              <h1>Conseil</h1>
+              <br />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                magnam iste maxime cupiditate saepe praesentium illo, sit iusto
+                reiciendis blanditiis nostrum, earum ratione a ut deserunt sed
+                quod rem vitae!
+              </p>
+              <br />
+              <h3 style={{ color: "#3a677c" }}>Dr ANDREW </h3>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };

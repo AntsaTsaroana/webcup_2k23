@@ -4,6 +4,7 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 
   &::before {
     position: absolute;
@@ -35,6 +36,7 @@
     .title {
       position: relative;
       top: -30px;
+      right: -75%;
       color: $first_color;
       text-align: center;
       font-size: 30px;
@@ -42,6 +44,9 @@
     }
 
     p {
+      position: relative;
+      top: -15%;
+      opacity: 0;
       text-align: center;
       width: 50%;
       color: white;
@@ -49,10 +54,16 @@
 
     .btnConsultation {
       @include button;
+      position: relative;
+      top: -65px;
+      opacity: 0;
       margin-top: 25px;
     }
 
     .mouse_scroll {
+      position: relative;
+      bottom: -150px;
+      opacity: 0;
       display: block;
       margin: 0 auto;
       width: 24px;
@@ -273,17 +284,24 @@
     height: 350px;
     background-color: #ecf2ff;
     margin: 20px auto;
+
     &__inner {
       position: relative;
       top: 25px;
       left: -25px;
       width: 350px;
       height: 300px;
+      overflow: hidden;
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

@@ -1,13 +1,13 @@
-import { useLayoutEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Link } from 'react-router-dom';
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
-import headerVideo from '../Assets/video/headerVideo.mp4';
-import descriptionImg from '../Assets/img/Description/descriptionImg.jpg';
-import quotes from '../Assets/img/Comment/quotes.png';
-import '../Assets/css/pageLoadReveal.scss';
-import '../Assets/css/accueil.scss';
+import headerVideo from "../Assets/video/headerVideo.mp4";
+import descriptionImg from "../Assets/img/Description/descriptionImg.webp";
+import quotes from "../Assets/img/Comment/quotes.png";
+import "../Assets/css/pageLoadReveal.scss";
+import "../Assets/css/accueil.scss";
 
 const Accueil = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -38,10 +38,80 @@ const Accueil = () => {
         .add(() => {
           document.querySelector(".load-container").style.display = "none";
         })
-        .to(`h1`, {
-          top: 0,
-          duration: 0.5,
-        });
+        .to(`.title`, {
+          top: "-60px",
+          autoAlpha: 1,
+          duration: 2,
+          onComplete: () => {
+            gsap.to(".title h1", {
+              y: 400,
+              duration: 1,
+              scrollTrigger: {
+                trigger: ".shortDescription",
+                scrub: true,
+              },
+            });
+          },
+        })
+        .to(
+          `.tiret`,
+          {
+            height: "90px",
+            onComplete: () => {
+              gsap.to(".tiret", {
+                y: 100,
+                opacity: 0,
+                rotate: 360,
+                duration: 1,
+                scrollTrigger: {
+                  trigger: ".shortDescription",
+                  scrub: true,
+                },
+              });
+            },
+          },
+          "-=1"
+        )
+        .to(
+          `.paragrapheHeader`,
+          {
+            top: "0",
+            opacity: 1,
+            onComplete: () => {
+              gsap.to(".paragrapheHeader", {
+                y: 200,
+                duration: 1,
+                transform: "scale(1.5)",
+                scrollTrigger: {
+                  trigger: ".shortDescription",
+                  scrub: true,
+                },
+              });
+            },
+          },
+          "-=0.25"
+        )
+        .to(`.social1`, { bottom: 0, opacity: 1 }, "-=0.25")
+        .to(`.social2`, { bottom: 0, opacity: 1 }, "-=0.25")
+        .to(
+          `.social3`,
+          {
+            bottom: 0,
+            opacity: 1,
+            onComplete: () => {
+              gsap.to(".social", {
+                y: 200,
+                gap:"200px",
+                duration: 1,
+                scrollTrigger: {
+                  trigger: ".shortDescription",
+                  scrub: true,
+                },
+              });
+            },
+          },
+          "-=0.25"
+        );
     }, container);
 
     return () => ctx.revert();
@@ -59,7 +129,9 @@ const Accueil = () => {
           </div>
 
           <div className="bloc-txt">
-            <h2><strong style={{color:"#3A677C"}}>A</strong>CCUEIL.</h2>
+            <h2>
+              <strong style={{ color: "#3A677C" }}>A</strong>CCUEIL.
+            </h2>
           </div>
         </div>
       </div>
@@ -74,16 +146,22 @@ const Accueil = () => {
               <h1>Que signifie t'il?</h1>
             </span>
             <span className="tiret"></span>
-            <p>
+            <p className="paragrapheHeader">
               Comprendre la signification de nos rêves peut nous donner des
               informations précieuses sur nos pensées, nos sentiments et nos
               comportements inconscients, ce qui peut nous aider à mieux nous
               connaître et à mieux naviguer dans notre vie éveillée.
             </p>
             <div className="social">
-              <Link to="/">Facebook</Link>
-              <Link to="/">Instagram</Link>
-              <Link to="/">Twitter</Link>
+              <Link to="/" className="soc social1">
+                Facebook
+              </Link>
+              <Link to="/" className="soc social2">
+                Instagram
+              </Link>
+              <Link to="/" className="soc social3">
+                Twitter
+              </Link>
             </div>
           </div>
         </header>
@@ -161,7 +239,7 @@ const Accueil = () => {
         {/* Section 3 */}
         <section className="pricingSection">
           <span className="titlePrice">
-            {' '}
+            {" "}
             <h1>NOS TARIFS</h1>
           </span>
           <div className="plan">
@@ -211,7 +289,7 @@ const Accueil = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span style={{ textDecoration: 'line-through' }}>
+                  <span style={{ textDecoration: "line-through" }}>
                     Plan <strong>team meetings</strong>
                   </span>
                 </li>
@@ -230,7 +308,7 @@ const Accueil = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span style={{ textDecoration: 'line-through' }}>
+                  <span style={{ textDecoration: "line-through" }}>
                     File sharing
                   </span>
                 </li>
@@ -308,7 +386,7 @@ const Accueil = () => {
                       ></path>
                     </svg>
                   </span>
-                  <span style={{ textDecoration: 'line-through' }}>
+                  <span style={{ textDecoration: "line-through" }}>
                     File sharing
                   </span>
                 </li>
