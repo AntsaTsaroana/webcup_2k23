@@ -1,4 +1,3 @@
-
 import { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import "../Assets/css/enregistrement.scss";
 import "../Assets/css/pageLoadReveal.scss";
-import axios from '../api';
+import axios from "../api";
 
 const Enregistrement = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -17,6 +16,17 @@ const Enregistrement = () => {
   useLayoutEffect(() => {
     // ALL ANIMATION :
     const ctx = gsap.context(() => {
+      gsap.set(".follower", { xPercent: -50, yPercent: -50 });
+      gsap.set(".cursor", { xPercent: -50, yPercent: -50 });
+
+      var follow = document.querySelector(".follower");
+      var cur = document.querySelector(".cursor");
+
+      window.addEventListener("mousemove", (e) => {
+        gsap.to(cur, 0, { x: e.clientX, y: e.clientY });
+        gsap.to(follow, 0.7, { x: e.clientX, y: e.clientY });
+      });
+
       const TLLOAD = gsap.timeline({
         default: {
           ease: "power2",
@@ -49,40 +59,38 @@ const Enregistrement = () => {
   const container = useRef(null);
 
   const signUp = () => {
-    container.current.classList.add('right-panel-active');
+    container.current.classList.add("right-panel-active");
   };
 
   const signIn = () => {
-    container.current.classList.remove('right-panel-active');
+    container.current.classList.remove("right-panel-active");
   };
 
-  const [lastName, setLastName] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const inscription = async (event) => {
     event.preventDefault();
     if (password === confirmPassword) {
       await axios
-        .post('webcup/api/users', {
+        .post("webcup/api/users", {
           firstName: firstName,
           lastName: lastName,
           email: email,
           password: password,
-          passwordConfirmation:confirmPassword
+          passwordConfirmation: confirmPassword,
         })
         .then((res) => {
-          console.log('Inscription avec succès');
+          console.log("Inscription avec succès");
         })
         .catch((error) => console.error(error));
     } else {
-      alert('Les deux mots de passes ne sont pas identiques');
+      alert("Les deux mots de passes ne sont pas identiques");
     }
   };
-
-  mongodb://sbeautyApp:pASS2022@api-sbeauty.smartpredict.ai:27017/?authMechanism=SCRAM-SHA-1&authSource=sbeauty
 
   return (
     <>
@@ -106,6 +114,8 @@ const Enregistrement = () => {
       </div>
 
       <div className="enregistrement">
+        <div className="cursor"></div>
+        <div className="follower"></div>
         <div className="containerEnregistrement" id="container" ref={container}>
           <div className="form-container sign-up-container">
             <form action="#" onSubmit={inscription}>

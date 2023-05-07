@@ -3,8 +3,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Loading from "./Components/Loading";
 import { AuthContext } from "./Context/AuthContext";
 import axios from "axios";
+
+
 import { About } from "./Pages/About";
 import { Contact } from "./Pages/Contact";
+import ErrorPages from "./Pages/ErrorPage";
 
 const Navbar = React.lazy(() => import("./Components/Navbar"));
 const Accueil = React.lazy(() => import("./Pages/Accueil"));
@@ -22,6 +25,9 @@ function App() {
         {/* Navbar */}
         <Navbar />
         <Routes>
+          {/* ERROR PAGE */}
+          <Route path="*" element={<ErrorPages />} />
+
           {/* Page d'accueil */}
           <Route exact path="/" element={<Accueil />} />
           <Route exact path="/consultation" element={<Consultation />} />

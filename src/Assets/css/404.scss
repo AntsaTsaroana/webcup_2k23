@@ -1,0 +1,27 @@
+@import "../css/index.scss";
+
+.errorPage {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #60929b;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .errorTitle {
+    color: #3a677c;
+    font-size: 250px;
+  }
+
+  h3 {
+      color: $first_color;
+  }
+
+  .btnError {
+      @include button;
+      margin-top: 25px;
+  }
+}

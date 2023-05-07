@@ -45,6 +45,33 @@ button {
   letter-spacing: 5px;
 }
 
+.follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #333;
+  border-radius: 50%;
+  opacity: 0.7;
+  z-index: 2000;
+  user-select: none;
+  pointer-events: none;
+}
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  z-index: 2001;
+  user-select: none;
+  pointer-events: none;
+}
+
 $first_color: #f1f1f1;
 $sec_color: #333;
 $color_3: #3a677c;
@@ -69,6 +96,7 @@ $color_7: #d8a29c;
 // GLOBAL MODIFICATION :
 
 body {
+  cursor: none;
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
 }

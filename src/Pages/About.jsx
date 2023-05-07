@@ -1,7 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Link } from "react-router-dom";
 
 import "../Assets/css/about.scss";
 import "../Assets/css/pageLoadReveal.scss";
@@ -16,6 +15,16 @@ export const About = () => {
   useLayoutEffect(() => {
     // ALL ANIMATION :
     const ctx = gsap.context(() => {
+      gsap.set(".cursorP", { xPercent: -50, yPercent: -50 });
+      gsap.set(".followerP", { xPercent: -50, yPercent: -50 });
+
+      var follow = document.querySelector(".followerP");
+      var cur = document.querySelector(".cursorP");
+
+      window.addEventListener("mousemove", (e) => {
+        gsap.to(cur, 0, { x: e.clientX, y: e.clientY });
+        gsap.to(follow, 0.7, { x: e.clientX, y: e.clientY });
+      });
       const TLLOAD = gsap.timeline({
         default: {
           ease: "power2",
@@ -44,7 +53,7 @@ export const About = () => {
 
     return () => ctx.revert();
   }, []);
-  
+
   return (
     <>
       {/* LOADING OVERLAY */}
@@ -65,6 +74,7 @@ export const About = () => {
           </div>
         </div>
       </div>
+      <div className="cursorP"></div>
       <section className="about">
         <div className="header">
           <video src={teamMeeting} autoPlay muted loop></video>

@@ -18,6 +18,17 @@ const Accueil = () => {
   useLayoutEffect(() => {
     // ALL ANIMATION :
     const ctx = gsap.context(() => {
+      gsap.set(".follower", { xPercent: -50, yPercent: -50 });
+      gsap.set(".cursor", { xPercent: -50, yPercent: -50 });
+
+      var follow = document.querySelector(".follower");
+      var cur = document.querySelector(".cursor");
+
+      window.addEventListener("mousemove", (e) => {
+        gsap.to(cur, 0, { x: e.clientX, y: e.clientY });
+        gsap.to(follow, 0.7, { x: e.clientX, y: e.clientY });
+      });
+
       const TLLOAD = gsap.timeline({
         default: {
           ease: "power2",
@@ -101,7 +112,7 @@ const Accueil = () => {
             onComplete: () => {
               gsap.to(".social", {
                 y: 200,
-                gap:"200px",
+                gap: "200px",
                 duration: 1,
                 scrollTrigger: {
                   trigger: ".shortDescription",
@@ -138,6 +149,8 @@ const Accueil = () => {
 
       {/* ACCUEIL */}
       <div className="container">
+        <div className="cursor"></div>
+        <div className="follower"></div>
         <header>
           <video src={headerVideo} autoPlay muted loop></video>
           <div className="soratra">
