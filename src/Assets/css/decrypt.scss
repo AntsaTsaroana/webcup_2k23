@@ -1,0 +1,241 @@
+@import './index.scss';
+.header {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding-block: 5vw;
+    gap: 2rem;
+    background-image: url(../img/dreamCloud.webp);
+    background-position: center;
+    background-size: cover;
+    .glass {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        width: 60%;
+        // height: 40vh;
+        border-radius: 1rem;
+        background: #ffffff30;
+        padding: 2rem;
+        backdrop-filter: blur(5px);
+        z-index: 1;
+    }
+    .avatar {
+        border: 1px solid white;
+        border-radius: 10rem;
+        width: 50vh;
+        height: auto;
+        aspect-ratio: 1;
+        background-image: url(../img/image.svg);
+        background-size: cover;
+        background-position: center;
+    }
+    .text {
+        // z-index: 3;
+        // padding: 1rem 2rem;
+        color: $first_color;
+        h2 {
+            font-size: 2rem;
+        }
+        p {
+            margin-block: 2rem 3rem;
+            line-height: 1.5;
+            span {
+                font-weight: bold;
+                font-size: 1.5rem
+            }
+        }
+        .button {
+            @include button;
+            display: inline-block;
+        }
+    }
+}
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 5vw;
+    gap: 2rem;
+    min-height: 100vh;
+    position: relative;
+    background-image: url(../img/Cloud-5.9s-1084px.svg);
+    background-size: cover;
+    background-position: center;
+    .clouds {
+        min-height: 100vh;
+        width: 100%;
+        position: absolute;
+        // img {
+            // &:nth-child(1) {
+            //     position: absolute;
+            //     transform: translate(-50%, -50%);
+            //     top: 7%;
+            //     left: 4%;
+            //     width: 13rem;
+            //     height: auto;
+            //     z-index: 0;
+            // }
+            #cloud2 {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 45%;
+                left: 4%;
+                width: 21rem;
+                height: auto;
+                z-index: 0;
+            }
+            // &:nth-child(3) {
+            //     position: absolute;
+            //     transform: translate(-50%, -50%);
+            //     top: 7%;
+            //     right: -23%;
+            //     width: 13rem;
+            //     height: auto;
+            //     z-index: 0;
+            // }
+            // &:nth-child(4) {
+            //     position: absolute;
+            //     transform: translate(-50%, -50%);
+            //     top: 7%;
+            //     left: 4%;
+            //     width: 13rem;
+            //     height: auto;
+            //     z-index: 0;
+            // }
+            // &:nth-child(5) {
+            //     position: absolute;
+            //     transform: translate(-50%, -50%);
+            //     top: 7%;
+            //     left: 4%;
+            //     width: 13rem;
+            //     height: auto;
+            //     z-index: 0;
+            // }
+            #cloud6 {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                bottom: -18%;
+                left: 32%;
+                width: 16rem;
+                height: auto;
+                z-index: 0;
+            }
+            // &:nth-child(7) {
+            //     position: absolute;
+            //     transform: translate(-50%, -50%);
+            //     top: 7%;
+            //     left: 4%;
+            //     width: 13rem;
+            //     height: auto;
+            //     z-index: 0;
+            // }
+            // &:nth-child(8) {
+            //     position: absolute;
+            //     transform: translate(-50%, -50%);
+            //     top: -5%;
+            //     left: 33%;
+            //     width: 13rem;
+            //     height: auto;
+            //     z-index: 0;
+            // }
+            #cloud9 {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: -3%;
+                left: 35%;
+                width: 13rem;
+                height: auto;
+                z-index: 0;
+            }
+        // }
+    }
+    .left {
+        width: 30%;
+        z-index: 2;
+        h2 {
+            color: $sec_color;
+            font-size: 3rem;
+            // width: 70%;
+            margin: auto;
+        }
+        p {
+            margin-block: 1rem;
+        }
+    }
+    .right form {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        // gap: 2rem;
+        textarea {
+            font-family: inherit;
+            line-height: 1.3;
+            // border: none;
+            border-radius: 5px;
+            resize: none;
+            padding: 1rem 2rem;
+            border-color: $color_3;
+            z-index: 2
+        }
+        input[type="submit"],
+        a {
+            @include button();
+            border: none;
+            background: $color_3;
+            color: $first_color;
+            width: min-content;
+            padding: .8rem 1.3rem;
+            margin-top: .7rem;
+            z-index: 2;
+        }
+    }
+}
+.resultSection {
+    min-height: 100vh;
+    padding-inline: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        color: $sec_color;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .results {
+        width: 80%;
+        // margin: auto;
+        p {
+            margin-block: 1rem;
+            line-height: 1.5;
+        }
+    }
+}
+.example {
+    color: $sec_color;
+    padding-inline: 5vw;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: $sec_color;
+        margin-bottom: 1rem;
+    }
+    .cards {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        gap: 1rem;
+        .card {
+            padding: 1rem 1.5rem;
+            box-shadow: 0 0 10 10 #00000010;
+            flex: 1;
+        }
+    }
+}

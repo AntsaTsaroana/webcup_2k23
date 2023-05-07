@@ -4,10 +4,10 @@ import Loading from "./Components/Loading";
 import { AuthContext } from "./Context/AuthContext";
 import axios from "axios";
 
-
 import { About } from "./Pages/About";
 import { Contact } from "./Pages/Contact";
 import ErrorPages from "./Pages/ErrorPage";
+import { Decrypt } from "./Pages/Decrypt";
 
 const Navbar = React.lazy(() => import("./Components/Navbar"));
 const Accueil = React.lazy(() => import("./Pages/Accueil"));
@@ -34,6 +34,7 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contactUs" element={<Contact />} />
           <Route exact path="/enregistrement" element={<Enregistrement />} />
+          <Route exact path="/decrypt" element={<Decrypt />} />
         </Routes>
         {/* Footer */}
         <Footer />
