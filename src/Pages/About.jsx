@@ -1,13 +1,35 @@
 import React from 'react'
 import '../Assets/css/about.scss'
 import teamMeeting from '../Assets/video/team.mp4'
+import { useLayoutEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export const About = () => {
+  // gsap.registerPlugin(ScrollTrigger);
+
+  // // ALL REFERENCES :
+  const container = useRef();
+
+  useLayoutEffect(() => {
+    // ALL ANIMATION :
+    const ctx = gsap.context(() => {
+      const TLLOAD = gsap.timeline({
+        delay: 1
+      });
+
+      TLLOAD
+      .from(".header h2", { autoAlpha: 0, y: 50 })
+      .from(".header P", { autoAlpha: 0, y: -50 }, "-=.4")
+    }, container);
+
+    return () => ctx.revert();
+  }, []);
   return (
     <>
-      <section className="about">
+      <section className="about" ref={container}>
         <div className="header">
-        <video src={teamMeeting} autoPlay muted loop></video>
+          <video src={teamMeeting} autoPlay muted loop></video>
           <h2>A propos</h2>
           <p>Curieux de savoir qui se cache derrière notre entreprise ? Découvrez notre équipe et notre histoire.</p>
           

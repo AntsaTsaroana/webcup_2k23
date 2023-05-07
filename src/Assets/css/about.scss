@@ -62,12 +62,15 @@
         h2 {
             font-size: 5vw;
             color: $first_color;
+            visibility: hidden;
         }
         p {
+            opacity: 1;
             text-align: center;
             width: 70%;
             line-height: 1.5;
             color: $first_color;
+            visibility: hidden;
         }
         video {
             position: absolute;

@@ -5,6 +5,7 @@ import { AuthContext } from './Context/AuthContext';
 import axios from 'axios';
 import { About } from './Pages/About';
 import { Contact } from './Pages/Contact';
+import { Decrypt } from './Pages/Decrypt';
 
 const Inscription = React.lazy(() => import('./Pages/Inscription'));
 const Connexion = React.lazy(() => import('./Pages/Connexion'));
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contactUs" element={<Contact />} />
           <Route exact path="/enregistrement" element={<Enregistrement />} />
+          <Route exact path="/decrypt" element={<Decrypt />} />
         </Routes>
         {/* Footer */}
         <Footer />
