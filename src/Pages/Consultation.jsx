@@ -148,14 +148,18 @@ const Consultation = () => {
           <img src={imgPsycho} alt="Psyhcologue" />
           <div className="titleConsultation">
             <span className="title">
-              <h1>TIIIITRE 1</h1>
-              <h1>TIIIITRE 2</h1>
+              <h1>TROUVER L'EQUILIBRE</h1>
+              <h1>INTERIEUR</h1>
             </span>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-              blanditiis, et officia laudantium provident velit recusandae
-              corporis quidem in excepturi laboriosam itaque architecto quas
-              labore deserunt inventore quos, expedita alias?
+              Dans cette consultation, nous allons discuter de vos sources de
+              stress, de vos réactions face au stress et de différentes
+              stratégies pour mieux gérer vos émotions et votre anxiété. Nous
+              allons également explorer des techniques de relaxation et de
+              respiration pour vous aider à vous sentir plus calme et plus
+              serein. Je suis là pour vous écouter et vous soutenir dans cette
+              démarche. N'hésitez pas à me poser des questions ou à partager vos
+              préoccupations.
             </p>
             <Link to="#">
               <button className="btnConsultation">Contacter le Psy</button>
@@ -184,10 +188,13 @@ const Consultation = () => {
               <h1>Conseil</h1>
               <br />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                magnam iste maxime cupiditate saepe praesentium illo, sit iusto
-                reiciendis blanditiis nostrum, earum ratione a ut deserunt sed
-                quod rem vitae!
+                Au travail comme à la maison, personne n’est à l’abri du stress,
+                le mal moderne le mieux partagé ! Si le stress est une réaction
+                normale qui nous protège et nous fait avancer, à la longue, il
+                pille notre énergie, sape notre moral et fragilise notre système
+                immunitaire. La bonne nouvelle ? On peut apprendre à mieux le
+                gérer tout au long de la journée pour retrouver santé et
+                sérénité, et voir la vie du côté good !
               </p>
               <br />
               <h3 style={{ color: "#3a677c" }}>Dr ANDREW </h3>

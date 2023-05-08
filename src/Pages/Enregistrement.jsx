@@ -106,7 +106,7 @@ const Enregistrement = () => {
 
             <div className="bloc-txt">
               <h2>
-                <strong style={{ color: "#3A677C" }}>E</strong>REGISTREMENT.
+                <strong style={{ color: "#3A677C" }}>E</strong>NREGISTREMENT.
               </h2>
             </div>
           </div>

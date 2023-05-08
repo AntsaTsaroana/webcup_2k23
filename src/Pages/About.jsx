@@ -89,16 +89,10 @@ export const About = () => {
           <div className="text">
             <h3>Institut Internationnal des Reves</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas amet
-              ipsam eaque saepe deserunt aperiam a, dicta vero, veritatis
-              corrupti voluptatem. Esse, hic dolores? Quisquam vero aliquam aut
-              labore ipsam numquam dolore sed hic illum corrupti, commodi
-              voluptas sint ducimus.
+            Il s'agit d'une organisation qui se consacre à l'étude scientifique des rêves et de leur fonctionnement. L'institut mène des recherches sur les différentes dimensions du rêve, de la neurologie à la psychologie, en passant par la culture et la société. Il organise également des événements et des formations pour sensibiliser le grand public à l'importance des rêves dans nos vies.
             </p>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
-              laboriosam temporibus nihil sapiente impedit iusto fuga recusandae
-              maxime maiores reiciendis?
+            Les travaux de recherche de l'Institut International des rêves pour proposer des analyses de rêves toujours plus pertinentes et utiles. 
             </p>
             <a href="#" className="button">
               En savoir plus

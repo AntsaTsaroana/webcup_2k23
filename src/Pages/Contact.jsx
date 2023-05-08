@@ -106,22 +106,22 @@ export const Contact = () => {
                 <div className="card">
                   <FaMapMarkerAlt />
                   <h4>ADRESSE</h4>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <p>9 Rue des Augustin</p>
                 </div>
                 <div className="card">
                   <AiFillClockCircle />
-                  <h4>ADRESSE</h4>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <h4>HEURE</h4>
+                  <p>Lundi au Vendredi</p>
                 </div>
                 <div className="card">
                   <IoMdMail />
-                  <h4>ADRESSE</h4>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <h4>EMAIL</h4>
+                  <p>retina@gmail.com</p>
                 </div>
                 <div className="card">
                   <BsTelephoneFill />
-                  <h4>ADRESSE</h4>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                  <h4>TELEPHONE</h4>
+                  <p>05 56 92 745 67</p>
                 </div>
               </IconContext.Provider>
             </div>
