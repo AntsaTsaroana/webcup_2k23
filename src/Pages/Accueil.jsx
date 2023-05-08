@@ -59,7 +59,7 @@ const Accueil = () => {
               duration: 1,
               scrollTrigger: {
                 trigger: ".shortDescription",
-                scrub: true,
+                scrub: 0.8,
               },
             });
           },
@@ -76,7 +76,7 @@ const Accueil = () => {
                 duration: 1,
                 scrollTrigger: {
                   trigger: ".shortDescription",
-                  scrub: true,
+                  scrub: 0.8,
                 },
               });
             },
@@ -95,7 +95,7 @@ const Accueil = () => {
                 transform: "scale(1.5)",
                 scrollTrigger: {
                   trigger: ".shortDescription",
-                  scrub: true,
+                  scrub: 0.8,
                 },
               });
             },
